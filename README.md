@@ -23,7 +23,7 @@ This suite includes the following nodes:
 4.  **ASCII Index Image Render:** Renders ASCII text using images from a batch, where each character corresponds to an image index.
     - ASCII 索引图片渲染：使用图片批次渲染 ASCII 文本，每个字符对应一张图片。
 
-
+![showit](https://github.com/CoiiChan/ComfyUI_ASCIIArtNodeCoii/blob/main/example/example.png)
 ## Installation / 安装
 
 1.  **Download/Clone:**
