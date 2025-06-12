@@ -1,5 +1,7 @@
 # ComfyUI ASCII Art Nodes
 
+尚在整理，近日发布...Still organizing, recently released ..
+
 A set of custom nodes for ComfyUI that enable the creation of various ASCII art effects from static images or text.
 Features include: force_monospace option, easy font selection, and a dedicated fonts folder.
 
