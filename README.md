@@ -18,8 +18,10 @@ This suite includes the following nodes:
     - 静态 ASCII 艺术生成器：将单张图片转换为静态 ASCII 艺术图像。
 2.  **ASCII Art Render:** Renders multi-line ASCII text into an image, supporting font, size, character spacing, and line height adjustments.
     - ASCII 艺术渲染：将多行 ASCII 文本渲染为图片，支持字体、字号、字间距、行高等参数。
-3.  **ASCII Charset Replace:** Replaces characters in ASCII text according to two charset mappings, enabling style or symbol transformation.
-    - ASCII 字符集替换：根据两个字符集顺序，将 ASCII 文本中的字符逐一替换，实现风格或符号变换。
+3.  **ASCII Charset Replace:** Replaces characters in ASCII text according to two charset mappings, enabling style or symbol transformation with random noise option.
+    - ASCII 字符集替换：根据两个字符集顺序，将 ASCII 文本中的字符逐一替换，支持随机噪声比例。
+4.  **ASCII Index Image Render:** Renders ASCII text using images from a batch, where each character corresponds to an image index.
+    - ASCII 索引图片渲染：使用图片批次渲染 ASCII 文本，每个字符对应一张图片。
 
 
 ## Installation / 安装
@@ -63,14 +65,44 @@ Most nodes share a common set of parameters for ASCII generation and appearance.
 * `line_height_scale` (FLOAT): Multiplier for the space between lines.  
   行高倍率。
 
+### ASCII Index Image Render Node Parameters / ASCII 索引图片渲染节点参数：
+
+* `ascii_text` (STRING): Multi-line ASCII text where each character corresponds to an image index.  
+  多行 ASCII 文本，每个字符对应一个图片索引。
+* `images` (IMAGE): Batch of images to be used for rendering.  
+  用于渲染的图片批次。
+* `background_color` (STRING): Background color for areas without images (hex format).  
+  无图片区域的背景色（十六进制）。
+* `output_width` (INT): Width of the output image in pixels.  
+  输出图片宽度（像素）。
+* `output_height` (INT): Height of the output image in pixels.  
+  输出图片高度（像素）。
+* `image_ratio` (FLOAT): Scale factor for the images (0.1-2.0).  
+  图片缩放比例（0.1-2.0）。
+
+### ASCII Charset Replace Node Parameters / ASCII 字符集替换节点参数：
+
+* `ascii_text` (STRING): Input ASCII Multiline text to be processed.  
+  输入的 ASCII 多行文本。
+* `original_ascii_charset` (STRING): Source character set for replacement.  
+  源字符集。
+* `replac_ascii_charset` (STRING): Target character set for replacement.  
+  目标字符集。
+* `random_noise_ratio` (FLOAT): Probability of random character replacement (0.0-1.0).  
+  随机替换概率（0.0-1.0）。
+
 ---
 
-### ADDING Node Briefs / 补充节点简述
+### Node Usage Examples / 节点使用示例
 
 - **ASCII Art Render**: Render multi-line ASCII text into an image with customizable font, size, spacing, and line height.  
   多行 ASCII 文本渲染为图片，支持自定义字体、字号、字间距、行高。
-- **ASCII Charset Replace**: Replace characters in ASCII text according to two charset mappings, enabling style or symbol transformation.  
-  按两个字符集顺序替换 ASCII 文本字符，实现风格或符号变换。
+
+- **ASCII Charset Replace**: Replace characters in ASCII text according to two charset mappings, with optional random noise.  
+  按两个字符集顺序替换 ASCII 文本字符，支持随机噪声比例。
+
+- **ASCII Index Image Render**: Create a visual representation of ASCII text using images, where each character maps to a specific image in the batch.  
+  使用图片批次创建 ASCII 文本的可视化表示，每个字符映射到批次中的特定图片。
 
 ---
 [![CoiiChan](https://avatars.githubusercontent.com/u/49615294?v=4)](https://github.com/CoiiChan)
