@@ -6,7 +6,7 @@ Features include: force_monospace option, easy font selection, and a dedicated f
 ComfyUI 的一组自定义节点，可用于从静态图片或文本生成多种 ASCII 艺术效果。
 主要特性：支持强制等宽字体、便捷字体选择、独立字体文件夹。
 
-![Preview](https://github.com/CoiiChan/ComfyUI-ASCIIArtNodeCoii/blob/main/example/CoiiNodeScreenShot.png)
+![Preview](https://github.com/CoiiChan/ComfyUI_ASCIIArtNodeCoii/blob/main/example/CoiiNodeScreenShot.png)
 
 ## Features / 功能
 
